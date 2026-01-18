@@ -21,14 +21,6 @@ ingress_entry: /
 panel_admin: false
 homeassistant_api: true
 hassio_api: true
-ports:
-  8555/tcp: 8555
-  8555/udp: 8555
-  8554/tcp: null
-  8971/tcp: null
-  5000/tcp: null
-  1984/tcp: null
-  1935/tcp: null
 ports_description:
   8555/tcp: WebRTC over tcp
   8555/udp: WebRTC over udp
@@ -36,7 +28,7 @@ ports_description:
   8971/tcp: Authenticated Web interface
   5000/tcp: Unauthenticated Web interface (not required for Home Assistant Ingress)
   1984/tcp: go2rtc API
-host_network: false
+host_network: true
 devices:
   - /dev/dri/renderD128
   - /dev/apex_0
